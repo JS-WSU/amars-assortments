@@ -9,6 +9,7 @@
 	import CATEGORIES from '$lib/constants/CATEGORIES';
 	import MainMenu from '$lib/components/MainMenu.svelte';
 	import { base } from '$app/paths';
+	import { loopThroughObjRecurse } from '$lib/utils';
 </script>
 
 <svelte:head>

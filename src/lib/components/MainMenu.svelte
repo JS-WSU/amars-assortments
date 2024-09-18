@@ -3,6 +3,7 @@
 	import CATEGORIES from '$lib/constants/CATEGORIES';
 	import Icon from '@iconify/svelte';
 	import SubMenu from './SubMenu.svelte';
+	import { base } from '$app/paths';
 
 	export let category: string;
 

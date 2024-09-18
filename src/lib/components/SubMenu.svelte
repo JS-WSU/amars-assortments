@@ -3,24 +3,22 @@
 	import CATEGORIES from '$lib/constants/CATEGORIES';
 	import * as Sheet from '$lib/components/ui/sheet';
 	import { base } from '$app/paths';
+	import type { Categories } from '$lib/types';
 
-	type Category = (typeof CATEGORIES)[keyof typeof CATEGORIES];
-
-	export let subCategory: Record<string, never> | Record<string, Record<string, never>>;
+	export let subCategory: Categories;
 	export let key: string;
-	export let href: string = `${base}/${key}`;
 
 	const subCategories = Object.entries(subCategory);
 </script>
 
 {#if !subCategories.length}
-	<DropdownMenu.Item class="text-start"><a {href} class="w-full">{key}</a></DropdownMenu.Item>
+	<DropdownMenu.Item class="text-start"><a href={`${base}/${key}`} class="w-full">{key}</a></DropdownMenu.Item>
 {:else}
 	<DropdownMenu.Sub>
 		<DropdownMenu.SubTrigger>{key}</DropdownMenu.SubTrigger>
 		<DropdownMenu.SubContent class="kanit-medium">
 			{#each subCategories as [k, sc]}
-				<svelte:self key={k} subCategory={sc} href={`${base}/${key}/${k}`} />
+				<svelte:self key={k} subCategory={sc} />
 			{/each}
 		</DropdownMenu.SubContent>
 	</DropdownMenu.Sub>

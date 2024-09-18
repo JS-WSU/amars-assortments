@@ -1,31 +1,6 @@
-// export default [
-// 	{
-// 		name: 'Meat',
-// 		subCategories: [
-// 			{
-// 				name: 'Chicken',
-// 				subCategories: [
-// 					{ name: 'Chicken Sandwich' },
-// 					{ name: 'Chicken Tikka Masala' },
-// 					{ name: 'Butter Chicken' },
-// 					{ name: 'Chicken Burrito' }
-// 				]
-// 			},
-// 			{ name: 'Goat Meat' },
-// 			{ name: 'Lamb' }
-// 		]
-// 	},
-// 	{
-// 		name: 'Sweets',
-// 		subCategories: [{ name: 'Gulabjamun', subCategories: [] }, { name: 'Jalebi' }, { name: '' }]
-// 	},
-// 	{ name: 'Dairy', subCategories: [{ name: 'Other', subCategories: [] }] },
-// 	{ name: 'Beans, Legumes, & Rice', subCategories: [{ name: 'Other', subCategories: [] }] },
-// 	{ name: 'Fruits and Veggies', subCategories: [{ name: 'Other', subCategories: [] }] },
-// 	{ name: 'Other', subCategories: [{ name: 'Other', subCategories: [] }] }
-// ];
+import type { Categories } from '$lib/types';
 
-export default {
+const CATEGORIES: Categories = {
 	Meat: {
 		'Goat Meat': {},
 		Lamb: {},
@@ -50,7 +25,7 @@ export default {
 	Dairy: {
 		'Mango Lassi': {},
 		Milkshake: {},
-		
+
 		'Dahi (Yogurt)': {}
 	},
 	'Beans, Legumes, & Rice': {
@@ -66,7 +41,7 @@ export default {
 		'Fruit Smoothie': {
 			'Berry Blast': {},
 			'Orange & Mango': {}
-		},
+		}
 	},
 	Bread: {
 		'Garlic Bread Naan': {},
@@ -78,3 +53,5 @@ export default {
 		'Hash browns': {}
 	}
 };
+
+export default CATEGORIES;
