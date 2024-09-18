@@ -1,5 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">
+<script lang="ts">
+	import Button from '$lib/components/ui/button/button.svelte';
+</script>
 
-hello from github pages
-</a> to read the documentation</p>
+<h1>Welcome to Amar's Assortments!</h1>
+<p>Above you can find all the foods that you desire and get more info about them!</p>
+
