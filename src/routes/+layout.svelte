@@ -8,6 +8,7 @@
 	import { CloudCog } from 'lucide-svelte';
 	import CATEGORIES from '$lib/constants/CATEGORIES';
 	import MainMenu from '$lib/components/MainMenu.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -21,7 +22,7 @@
 
 <div class="kanit-medium flex h-screen flex-col">
 	<header class="flex items-center justify-between bg-gray-200 p-2 lg:justify-normal">
-		<a href="/" class="flex items-center">
+		<a href={`${base}/`} class="flex items-center">
 			<Icon icon="material-symbols:food-bank-rounded" class="text-5xl" />
 			<h1 class="kanit-extrabold-italic text-xl">Amar's Assortments</h1>
 		</a>
